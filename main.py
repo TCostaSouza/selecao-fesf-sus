@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -44,3 +44,14 @@ def criar_tarefa(tarefa_recebida: Tarefa):
     contador_id += 1 # Prepara o próximo ID
     
     return nova_tarefa
+
+# Remover tarefa
+@app.delete("/tarefas/{tarefa_id}")
+def deletar_tarefa(tarefa_id: int):
+    for indice, tarefa in enumerate(tarefas):
+        if tarefa["id"] == tarefa_id:
+            del tarefas[indice]
+            return {"mensagem": "Tarefa apagada com sucesso"}
+            
+    # Se não encontrar o ID, retorna 404
+    raise HTTPException(status_code=404, detail="Tarefa não encontrada.")
