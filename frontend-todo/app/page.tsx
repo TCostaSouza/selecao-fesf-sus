@@ -19,7 +19,22 @@ export default function Home() {
     }
   };
 
+  // Carrega as tarefas quando a página inicia
   useEffect(() => {
     buscarTarefas();
   }, []);
+
+  const deletarTarefa = async (id) => {
+    try {
+      const resposta = await fetch(`${backendUrl}/${id}`, {
+        method: "DELETE",
+      });
+
+      if (resposta.ok) {
+        buscarTarefas(); // Atualiza a lista tirando a tarefa que foi apagada
+      }
+    } catch (erro) {
+      console.error("Erro ao deletar tarefa:", erro);
+    }
+  };
 }
