@@ -39,6 +39,8 @@ Frontend: Acesse 👉 http://localhost:3000Backend
 API Docs: Acesse 👉 http://localhost:8000/docs 
 (Para parar os serviços posteriormente, basta apertar Ctrl + C no terminal ou executar docker compose down).
 
+---
+
 ## Como executar o projeto localmente (Sem Docker)
 
 Caso prefira configurar os ambientes manualmente, siga os passos abaixo para baixar e rodar o projeto na sua máquina.  
