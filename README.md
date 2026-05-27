@@ -94,6 +94,10 @@ Inicie o servidor de desenvolvimento do Next.js
 npm run dev
 ```
 
-Passo 4: Acessar o AplicativoCom os dois terminais rodando, abra o seu navegador de internet e acesse[cite: 1]:
-👉 http://localhost:3000[cite: 1]Para ver a documentação interativa da API do backend, acesse[cite: 1]:
-👉 http://127.0.0.1:8000/docs[cite: 1]
+### Passo 4: Acessar o Aplicativo
+
+Com os dois terminais rodando, abra o seu navegador de internet e acesse: 
+👉 http://localhost:3000
+
+Para ver a documentação interativa da API do backend, acesse:
+👉 http://127.0.0.1:8000/docs
