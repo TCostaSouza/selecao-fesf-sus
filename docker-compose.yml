@@ -1,0 +1,38 @@
+# @author Tainã Costa
+# @description Orquestração de serviços com rede interna e mapeamento de portas
+
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-api
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    environment:
+      - ENVIRONMENT=production
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend-todo
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment:
+      # Consumo da API via nome do serviço definido na rede interna
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
