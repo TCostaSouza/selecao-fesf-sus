@@ -32,21 +32,25 @@ cd selecao-fesf-sus
 Com o python instalado no seu computador, crie e ative um ambiente virtual local:
 
 1. Crie um Ambiente Virtual para isolar as dependências:
+```
 Windows: python -m venv venv
 Mac/Linux: python3 -m venv venv
+```
 
 2. Ative o Ambiente Virtual:
+```
 Windows: .\venv\Scripts\activate
 Mac/Linux: source venv/bin/activate
+```
 
 
 3. Instale as dependências necessárias:
-```bash
+```
 pip install -r requirements.txt
 ```
 
 4. Inicie o servidor:
-```bash
+```
 python -m uvicorn main:app --reload
 ```
 
@@ -56,17 +60,17 @@ IMPORTANTE!: Uma vez que o servidor esteja rodando, NÃO feche esse terminal!
 Abra uma nova janela de terminal (para não fechar o backend) e siga os passos:
 
 1. Navegue até a pasta do frontend:
-```bash
+```
 cd frontend-todo
 ```
 
 2. Instale as dependências do Node.js (isso vai ler o arquivo package.json e baixar o que for preciso):
-```bash
+```
 npm install
 ```
 
 3. Inicie o servidor de desenvolvimento do Next.js:
-```bash
+```
 npm run dev
 ```
 
