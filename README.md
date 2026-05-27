@@ -32,16 +32,13 @@ cd selecao-fesf-sus
 Com o python instalado no seu computador, crie e ative um ambiente virtual local:
 
 1. Crie um Ambiente Virtual para isolar as dependências:
-```bash
 Windows: python -m venv venv
 Mac/Linux: python3 -m venv venv
-```
 
 2. Ative o Ambiente Virtual:
-```bash
 Windows: .\venv\Scripts\activate
 Mac/Linux: source venv/bin/activate
-```
+
 
 3. Instale as dependências necessárias:
 ```bash
